@@ -75,4 +75,30 @@ public class Customer {
     private String toDollars(double d){
         return String.format("$%,.2f", abs(d));
     }
+    
+   private int totalCustomers() {
+       
+       
+   }
+    
+    public viod displayCustomers() { // albert pi
+      double balance =0;
+       for (Customer c : customers) {
+         System.out.println("We have " + customers.size() + " customers in our bank");  
+       }
+        
+        for (Account a : accounts) {                     
+                 System.out.println("The customer have " + a.getAccountType() + "accounts in our bank");                 
+            
+        }
+    
+  }
+    
+  public voiod displayinterestPaid() { // albert pi
+          double sum = 0;
+        for (Account a : accounts)
+                sum += a.interestEarned();
+        
+      System.out.println("The total interest paid by the bank on all accounts. Tansfered: $" + sum);
+
 }
